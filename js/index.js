@@ -2,6 +2,26 @@
  * Created by Administrator on 2016/5/4.
  */
 $(function(){
+    //laod image
+    (function(){
+        function loadimg(url,callBack){
+            var img = new Image();
+            img.src=url;
+            if(callBack) {
+                img.onload = callBack;
+            }
+        }
+        for(var i=1;i<5;i++){
+
+            if(i==1){
+                loadimg("images/"+i+".png",function(){
+                    $(".load").remove();
+                });
+            }else{
+                loadimg("images/"+i+".png");
+            }
+        }
+    })();
     $(".load").remove();
     function centerPersent(sonS,farS){
         alert((1-$(sonS).height()/$(farS).height())/2*100);
