@@ -2,6 +2,7 @@
  * Created by Administrator on 2016/5/4.
  */
 $(function(){
+    $(".load").remove();
     function centerPersent(sonS,farS){
         alert((1-$(sonS).height()/$(farS).height())/2*100);
         alert((1-$(sonS).width()/$(farS).width())/2*100);
