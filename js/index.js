@@ -15,14 +15,15 @@ $(function(){
 
             if(i==1){
                 loadimg("images/b"+i+".png",function(){
-                    $(".load").remove();
+                   setTimeout(function(){
+                       $(".load").remove()
+                   },2000) ;
                 });
             }
                 loadimg("images/"+i+".png");
 
         }
     })();
-    $(".load").remove();
     function centerPersent(sonS,farS){
         alert((1-$(sonS).height()/$(farS).height())/2*100);
         alert((1-$(sonS).width()/$(farS).width())/2*100);
