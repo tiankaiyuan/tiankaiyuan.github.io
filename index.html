@@ -2,21 +2,91 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>burst</title>
-    <link rel="stylesheet" href="css/burst.css">
+    <title>index</title>
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-<div class="image-sit">
-    <div class="image">
-
+    <div class="nav">
+        <div class="navigation-bar">
+        <div class="home">
+            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-home fa-3x"></span><span class="home navnext">主页</span></span></a>
+        </div>
+        <div class="proj">
+            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-product-hunt fa-3x"></span><span class="proj navnext">项目</span></span></a>
+        </div>
+        <div class="me">
+            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-male fa-3x"></span><span class="resume navnext">简历</span></span></a>
+        </div>
+        <div class="tecn">
+            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-gears fa-3x"></span><span class="tecn navnext">技能</span></span></a>
+        </div>
     </div>
-</div>
-<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-<script type="text/javascript" src="js/Modernizr.js"></script>
-<script type="text/javascript" src="js/specialE.js"></script>
-<script>
-    freeFall(".image",0.15,"left",8,500,0);
-     specialE(".image",700,400,"burst",1);
-</script>
+        <div class="nav-bor-door">
+            <div class="wave"></div>
+            <span class="fa fa-angle-double-right fa-2x"></span>
+        </div>
+    </div>
+    <div class="layer-1">
+        <div class="show-container">
+            <div class="show-box  center-box num0" >
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num1">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num2">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num3">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num4">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num5">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num6">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box num7">
+                <div class="show-box-content"></div>
+            </div>
+            <div class="show-box bad-box num8">
+                <div class="show-box-content"></div>
+            </div>
+        </div>
+        <div class="background-box"></div>
+    </div>
+    <div class="layer-2">
+        <div class="background-box-l2"></div>
+        <div class="container-box-l2">
+            <div class="images"></div>
+            <div class="text">
+                <p>旧时光，如歌风铃，叮出彷徨，当出守望。</p><p>我欲归来，却被风雨阻拦，置于塞外。</p><p>几经风雨，多番雪沙，还添几许寂寞，落得半身孤独，柔情撕碎一地，一叶扫遍金秋，怎知我心已残，满腹忧伤，泪眼婆娑，一地荒凉。</p><p>思念你，用半身情、千行泪、三生缘，终未曾与你，走遍天涯。今生尘世难交煎，往日多情惹风流。泪洒处，空有恨，仍不了情。心碎时，痛难当，绝不了缘。忘川河畔，喝下那碗孟婆汤，不再回头，愿悲伤化作欣欢，流向南方。梦过西桥，见你容颜，还是那么笑甜，或有一天，会再看你一眸。</p>
+            </div>
+            <canvas id="close-l2" width="25px" height="25px"></canvas>
+        </div>
+    </div>
+    <div class="layer-3"></div>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/Modernizr.js"></script>
+    <script type="text/javascript" src="js/specialE.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!--<script>-->
+<!--猜想除了以对象方法调用函数this执行当前对象其他都是window对象 除了使用call 和applay-->
+        <!--var name="the window";-->
+        <!--var obj={-->
+            <!--name:"my object",-->
+            <!--getN:function(){-->
+                <!--(function test(){-->
+                    <!--console.log(this.name);-->
+                <!--})();-->
+            <!--}-->
+        <!--};-->
+        <!--console.log(obj.getN());-->
+    <!--</script>-->
+
 </body>
 </html>

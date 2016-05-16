@@ -1,0 +1,210 @@
+html,body{
+    position:relative;
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    /*overflow:hidden;*/
+}
+/*navigation-bar*/
+.nav{
+    position:fixed;
+    z-index:999;
+    height:100%;
+    opacity: 0.5;
+}
+.navigation-bar{
+    float:left;
+    display:block;
+    height:100%;
+    width: 0;
+    background:black;
+    overflow:hidden;
+    color:white;
+    transition:width 0.3s linear;
+}
+
+.home,.proj,.me,.tecn{
+    height:25%;
+    display:table;
+    width:82px;
+    text-align:center;
+    overflow:hidden;
+    font-size:15px;
+}
+.navigation-bar a.link-a{
+    cursor:pointer;
+    display:table-cell;
+    vertical-align:middle;
+    overflow:hidden;
+}
+.conte-container{
+    display: inline-block;
+}
+a.link-a .fa{
+    display:inline-block;
+    overflow:hidden;
+    width:45px;
+    transition:width 0.3s linear;
+}
+.navigation-bar a .navnext{
+    display:inline-block;
+    height:46px;
+    width:0;
+    overflow:hidden;
+    transition:width 0.3s linear;
+    line-height:46px;
+    font-size:25px;
+    background:rgba(255,255,255,0);
+    /*opacity:1;*/
+}
+
+/*nav-bor-door*/
+.nav-bor-door{
+    float:left;
+    position:relative;
+    display:block;
+    background:black;
+    width:40px;
+    height:100%;
+    overflow:hidden;
+    color:white;
+}
+.nav-bor-door .wave{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:40px;
+    height:40px;
+    /*transform:translate(-50%,-50%);*/
+    animation:waveing 2s infinite;
+    transform-origin:center center;
+    border:1px solid white;
+    border-radius:50%;
+}
+.nav-bor-door .fa{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    opacity:0.7;
+    font-size:30px;
+}
+@keyframes waveing{
+    from{
+        transform:translate(-50%,-50%) scale(0,0);
+        border-color:rgba(255,255,255,1);
+    }
+    /*50%{*/
+        /*transform:translate(-50%,-50%) scale(1,1);*/
+        /*border-color:rgba(225,255,255,0.7);*/
+    /*}*/
+    to{
+        transform:translate(-50%,-50%) scale(1.5,1.5);
+        border-color:rgba(225,255,255,0);
+    }
+}
+.nav-bor-door .wave{
+
+}
+.layer-1,.layer-2{
+    position:absolute;
+    height:100%;
+    left:0;
+    right:0;
+    overflow:hidden;
+    z-index:1;
+}
+.layer-2{
+    visibility:hidden;
+    /*z-index: 10;*/
+}
+.layer-1 .background-box,.layer-2 .background-box-l2{
+    background:url(../images/b1.png) no-repeat;
+    background-size:100% auto;
+    height:100%;
+    width:100%;
+}
+.layer-2 .background-box-l2{
+    /*background:url(../images/1.jpg) no-repeat;*/
+    background:rgba(0,0,0,0.2);
+}
+.layer-1 .show-container,.layer-2 .container-box-l2{
+    position:absolute;
+    /*height:100%;*/
+    /*width:100%;*/
+    background:rgba(0,0,0,0);
+    top:0;
+    /*// 一般不要使用默认值 因为浏览器之间有差异*/
+    left:40px;
+    bottom:0;
+    right: 0;
+    /*opacity:0;*/
+}
+.show-box{
+    cursor:pointer;
+    position:absolute;
+    display:block;
+
+    /*transform:translate(-50%,-50%);*/
+    /*border-radius: 6.2%;*/
+    width: 0;
+    height: 130px;
+    overflow:hidden;
+       /*color: #fcf2ff;*/
+    /*text-align:center;*/
+    /*box-shadow:10px 10px 5px #888888;*/
+    background-color: rgba(0,0,0, 0.5);
+    /*background:url(../images/b2.jpg) no-repeat;*/
+    /*background-size:100% auto;*/
+    transition: opacity 1s linear;
+    opacity:1;
+    /*-ms-transition:box-shadow 1s linear;*/
+}
+.show-container .center-box{
+        left: 13.12%;
+        top: 11.17%;
+        width:210px;
+        opacity:1;
+        z-index:2;
+}
+.show-box-content{
+    position:absolute;
+    background:rgba(0,0,0,0.4);
+    /*bottom:100%;*/
+    /*transition:bottom 1s linear;*/
+}
+.layer-2 .container-box-l2{
+    /*background:rgba(0,0,0,0.5);*/
+}
+.container-box-l2 .images{
+    position:absolute;
+    width:730px;
+    height:450px;
+    top:18.08%;
+    left:22.47%;
+    background:url(../images/1.png);
+    background-size:100% auto;
+}
+.container-box-l2 .text{
+    position:absolute;
+    width:670px;
+    height:390px;
+    top:18.08%;
+    left:22.47%;
+    padding:30px;
+    background:rgba(0,0,0,0.2);
+    overflow:hidden;
+    text-align:left;
+    font-size:20px;
+    color:white;
+    text-indent:40px;
+    line-height: 27px;
+    z-index:999;
+}
+#close-l2{
+    position:absolute;
+    right:0;
+    top:0;
+    background:rgba(0,0,0,0.2);
+}
