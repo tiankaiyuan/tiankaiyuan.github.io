@@ -6,10 +6,29 @@ html,body{
     padding:0;
     /*overflow:hidden;*/
 }
+/*load*/
+.load{
+    position:absolute;
+    right:0;
+    left:0;
+    top:0;
+    bottom:0;
+    background:black;
+    z-index:999;
+    color:white;
+    font-size:40px;
+    text-align:center;
+}
+.load .fa{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
 /*navigation-bar*/
 .nav{
     position:fixed;
-    z-index:999;
+    z-index:99;
     height:100%;
     opacity: 0.5;
 }
