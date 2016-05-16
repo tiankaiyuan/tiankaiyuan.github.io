@@ -14,12 +14,12 @@ $(function(){
         for(var i=1;i<5;i++){
 
             if(i==1){
-                loadimg("images/"+i+".png",function(){
+                loadimg("images/b"+i+".png",function(){
                     $(".load").remove();
                 });
-            }else{
-                loadimg("images/"+i+".png");
             }
+                loadimg("images/"+i+".png");
+
         }
     })();
     $(".load").remove();
