@@ -547,15 +547,17 @@ function specialE(selector,eveSelector,spEffect,firstImg,imgNum,funCallBack,unb)
                     if(now.y<-90 && !oDivPage.ch)
                     {
                         oDivPage.ch=true;
-                        oDivPage.innerHTML='<img />';
+                        //oDivPage.innerHTML='<img />';
+                        oDivPage.innerHTML='<div>';
 
-                        var oImg=oDivPage.getElementsByTagName('img')[0];
+                        //var oImg=oDivPage.getElementsByTagName('img')[0];
+                        var oImg=oDivPage.getElementsByTagName('div')[0];
 
-                        oImg.src='images//'+(next()+1)+imgType+'';
+                        //oImg.src='images//'+(next()+1)+imgType+'';
                         Utils.setStyle3(oImg, 'transform', 'scaleX(-1)');
 
                         Utils.setStyle(oImg, {
-                            right: 0, top: 0, width: '200%', height: '100%',position: 'absolute'
+                            right: 0, top: 0, width: '200%', height: '100%',position: 'absolute',background:"url(images//"+(next()+1)+imgType+") no-repeat"
                         });
                     }
 
