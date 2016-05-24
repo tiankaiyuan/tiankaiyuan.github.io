@@ -158,7 +158,7 @@ a.link-a .fa{
     left:40px;
     bottom:0;
     right: 0;
-    opacity:0;
+    /*opacity:0;*/
 }
 .show-box{
     cursor:pointer;
@@ -177,7 +177,7 @@ a.link-a .fa{
     /*background:url(../images/b2.jpg) no-repeat;*/
     /*background-size:100% auto;*/
     transition: opacity 1s linear;
-    opacity:1;
+    opacity:0;
     /*-ms-transition:box-shadow 1s linear;*/
 }
 .show-container .center-box{
