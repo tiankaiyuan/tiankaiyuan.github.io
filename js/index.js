@@ -14,7 +14,7 @@ app.controller("intCtrl",function ($scope,$http){
     //$scope.myInfos = ["第一条","第二条","fowjfosjof","djfosjfojso","jfsdjfosj"];
     //$scope.Doitems = ["第一条","第二条","fowjfosjof","djfosjfojso","jfsdjfosj"];
 
-    $http.post("infor.html").then(function Rsuccess(response){
+    $http.get("infor.html").then(function Rsuccess(response){
         for( i in response.data.info){
             $scope.ADitems = response.data.info["ADitems"];
             $scope.TCitems = response.data.info["TCitems"];
