@@ -1,0 +1,98 @@
+
+/*登录内容样式开始*/
+.re_body{
+    width:90%;
+    max-width:1300px;
+    height:auto;
+    margin:80px auto 30px auto;
+    overflow:hidden;
+    text-align:center;
+}
+.form-item{
+    width:462px;
+    overflow:hidden;
+    margin:0 auto;
+}
+.label{
+    display:inline-block;
+    width:120px;
+    height:40px;
+    font-size:15px;
+}
+.ipt,.ipt1,.ipt2{
+    width:326px;
+    height:35px;
+    border:1px solid #d2d2d2;
+    padding-left:10px;
+    font-size:16px;
+    font-family:"微软雅黑";
+    line-height:35px;
+    vertical-align:middle;
+}
+.login_tips{
+    display:inline-block;
+    height: 15px;
+    font-size: 13px;
+    margin: 5px 0 18px 126px;
+    line-height: 15px;
+    overflow: hidden;
+    float:left;
+}
+.submit_tips{
+    width:462px;
+    margin:5px auto 18px auto;
+    display:none;
+    height: 15px;
+    font-size: 13px;
+    text-align:left;
+    line-height: 15px;
+    overflow: hidden;
+}
+.tips_wrong{
+    color: #f45e64;
+    padding-left: 40px;
+    margin-top:10px;
+    margin-bottom:10px;
+    white-space: nowrap;
+    background: url('../images/login_icon.png') no-repeat -10px -93px;
+    height: 20px;
+    text-indent: 6px;
+}
+.submitBox{
+    text-align:center;
+}
+.submit{
+    width:280px;
+    height:40px;
+    font-size:18px;
+    color:#fff;
+    background:#19A7B5;
+    cursor:pointer;
+    font-family:"微软雅黑";
+    letter-spacing:2px;
+}
+.submit:hover{
+    background: #188694;
+}
+.login_submit{
+    margin-left:120px;
+    width:326px;
+    letter-spacing:3px;
+    font-family:'微软雅黑';
+}
+.forget_pwd{
+    float:left;
+}
+.register_account{
+    float:right;
+}
+.login_register{
+    width:205px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:right;
+    overflow:hidden;
+}
+.login_register a{
+    color: #188694;
+}

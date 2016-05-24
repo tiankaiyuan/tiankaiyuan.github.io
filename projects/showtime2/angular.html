@@ -1,0 +1,34 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/todo.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link  rel="stylesheet" href="css/todo.css">
+    <title>angular</title>
+</head>
+<body ng-app="shoppingList">
+   <div class="site">
+        <div ng-controller="shopCtrl" class="container-fluid">
+       <h2 class="total">Total Items:{{totalNum()}}</h2>
+       <ul class="list-group">
+           <li class="list-group-item" ng-repeat="x in producs">{{x.text}}
+               <!--<input type="checkbox" ng-model="x.done">-->
+               <span  class="close" aria-label="close" ng-click="removeItem($index)">&times;</span>
+           </li>
+       </ul>
+       <div class="input-group">
+            <input  ng-model="addNew" class="form-control">
+            <span class="input-group-btn">
+                <button type="button" ng-click="addProd()" class=" btn btn-default">add</button>
+            </span>
+       </div>
+       <p>{{errorText}}</p>
+   </div>
+   </div>
+</body>
+</html>

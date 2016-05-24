@@ -1,96 +1,139 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>index</title>
-    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+    <title>田凯远</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <!--<link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">-->
     <link rel="stylesheet" href="css/index.css">
+    <script src="lib/jquery-2.2.3.min.js"></script>
+    <script src="lib/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="js/index.js"></script>
 </head>
-<body>
-     <div class="load">
-         <span class="text">此网页只部分完成，后续精彩内容敬请期待</span>
-         <span class="fa fa-spinner fa-spin"></span>
-     </div>
-    <div class="nav">
-        <div class="navigation-bar">
-        <div class="home">
-            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-home fa-3x"></span><span class="home navnext">主页</span></span></a>
+<body ng-app="introduce" ng-controller="intCtrl">
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">田凯远</a>
         </div>
-        <div class="proj">
-            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-product-hunt fa-3x"></span><span class="proj navnext">项目</span></span></a>
-        </div>
-        <div class="me">
-            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-male fa-3x"></span><span class="resume navnext">简历</span></span></a>
-        </div>
-        <div class="tecn">
-            <a class="link-a"><span class="conte-container"><span class="navfir fa fa-gears fa-3x"></span><span class="tecn navnext">技能</span></span></a>
-        </div>
-    </div>
-        <div class="nav-bor-door">
-            <div class="wave"></div>
-            <span class="fa fa-angle-double-right fa-2x"></span>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-toggle="modal" data-target="#myModal">简介</a></li>
+                <li><a href="#">技能</a></li>
+                <li><a href="#">项目</a></li>
+            </ul>
         </div>
     </div>
-    <div class="layer-1">
-        <div class="show-container">
-            <div class="show-box  center-box num0" >
-                <div class="show-box-content"></div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+    <h3 class="margin">我是谁?</h3>
+    <img src="images/bird.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+    <h3><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">一个拥有梦想的人</button></h3>
+</div>
+<!--modal-->
+<div class="modal fade" id="myModal" role="dialog" style="color:black">
+    <div class="modal-dialog modal-lg">
+        <!-- modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">简介</h4>
             </div>
-            <div class="show-box num1">
-                <div class="show-box-content"></div>
+            <div class="modal-body">
+                <p ng-repeat="item in myInfos">{{item}}</p>
             </div>
-            <div class="show-box num2">
-                <div class="show-box-content"></div>
-            </div>
-            <div class="show-box num3">
-                <div class="show-box-content"></div>
-            </div>
-            <div class="show-box num4">
-                <div class="show-box-content"></div>
-            </div>
-            <div class="show-box num5">
-                <div class="show-box-content"></div>
-            </div>
-            <div class="show-box num6">
-                <div class="show-box-content"></div>
-            </div>
-            <div class="show-box num7">
-                <div class="show-box-content"></div>
-            </div>
-            <div class="show-box bad-box num8">
-                <div class="show-box-content"></div>
+            <div class="modal-footer">
+                <button class="close" type="button" data-dismiss="modal">Close</button>
             </div>
         </div>
-        <div class="background-box"></div>
     </div>
-    <div class="layer-2">
-        <div class="background-box-l2"></div>
-        <div class="container-box-l2">
-            <div class="images"></div>
-            <div class="text">
-                <p>旧时光，如歌风铃，叮出彷徨，当出守望。</p><p>我欲归来，却被风雨阻拦，置于塞外。</p><p>几经风雨，多番雪沙，还添几许寂寞，落得半身孤独，柔情撕碎一地，一叶扫遍金秋，怎知我心已残，满腹忧伤，泪眼婆娑，一地荒凉。</p><p>思念你，用半身情、千行泪、三生缘，终未曾与你，走遍天涯。今生尘世难交煎，往日多情惹风流。泪洒处，空有恨，仍不了情。心碎时，痛难当，绝不了缘。忘川河畔，喝下那碗孟婆汤，不再回头，愿悲伤化作欣欢，流向南方。梦过西桥，见你容颜，还是那么笑甜，或有一天，会再看你一眸。</p>
+</div>
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center" >
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 class="margin">我会什么</h3>
+            <div class="myList" style="color:black">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="item in TCitems">{{item}}</li>
+                </ul>
             </div>
-            <canvas id="close-l2" width="25px" height="25px"></canvas>
+        </div>
+        <div class="col-sm-4">
+            <h3 class="margin">我能做什么</h3>
+            <div class="myList" style="color:black">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="item in Doitems">{{item}}</li>
+                </ul>
+            </div>
+            <!--<a href="#" class="btn btn-default btn-lg">-->
+                <!--<span class="glyphicon glyphicon-search"></span> Search-->
+            <!--</a>-->
+        </div>
+        <div class="col-sm-4">
+            <h3 class="margin">我的优势</h3>
+            <div id="myList" style="color:black">
+                <ul class="list-group">
+                    <li class="list-group-item " ng-repeat="item in ADitems">{{item}}</li>
+                </ul>
+                <!--<div class="input-group">-->
+                    <!--<input class="form-control" ng-model="infoText">-->
+                <!--</div>-->
+            </div>
         </div>
     </div>
-    <div class="layer-3"></div>
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="js/Modernizr.js"></script>
-    <script type="text/javascript" src="js/specialE.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <!--<script>-->
-<!--猜想除了以对象方法调用函数this执行当前对象其他都是window对象 除了使用call 和applay-->
-        <!--var name="the window";-->
-        <!--var obj={-->
-            <!--name:"my object",-->
-            <!--getN:function(){-->
-                <!--(function test(){-->
-                    <!--console.log(this.name);-->
-                <!--})();-->
-            <!--}-->
-        <!--};-->
-        <!--console.log(obj.getN());-->
-    <!--</script>-->
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">
+    <h3 class="margin">更多信息</h3><br>
+    <div class="row">
+        <div class="col-sm-4 p1">
+            <p>项目1</p>
+            <a href="projects/weike/index.html" class="p1">
+                <img src="images/1.png" class="img-responsive margin p-img" style="width:100%;height:100%" alt="Image">
+                <div class="Pcontext">
+                    <p ng-repeat="item in projInfos1">{{item}}</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4  ">
+            <p>项目2</p>
+            <a href="projects/showtime2/index.html" class="p2">
+                <img src="images/2.png" class="img-responsive margin p-img" style="width:100%" alt="Image">
+                <div class="Pcontext">
+                    <p ng-repeat="item in projInfos2">{{item}}</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-sm-4 ">
+            <p>项目3</p>
+            <a href="projects/showtime/showtime.html" class="p3">
+                <img src="images/3.png" class="img-responsive margin p-img" style="width:100%;height:auto" alt="Image">
+                <div class="Pcontext">
+                    <p ng-repeat="item in projInfos3">{{item}}</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <p> 我的博客 <a href="http://www.w3schools.com">www.w3schools.com</a></p>
+</footer>
 
 </body>
 </html>

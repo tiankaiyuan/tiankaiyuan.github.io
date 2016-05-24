@@ -1,0 +1,120 @@
+/*注册内容样式开始*/
+.re_body{
+    width:90%;
+    max-width:1300px;
+    height:auto;
+    margin:60px auto 30px auto;
+    overflow:hidden;
+    text-align:center;
+}
+.re_bodyL{
+    float:left;
+    width:49%;
+}
+.re_bodyR{
+    float:right;
+    width:50%;
+    border-left:1px solid #cecece;
+}
+.form-item{
+    overflow: hidden;
+}
+.label{
+    display:inline-block;
+    width:120px;
+    height:40px;
+    font-size:15px;
+}
+.ipt,.ipt1,.ipt2{
+    width:326px;
+    height:35px;
+    border:1px solid #d2d2d2;
+    padding-left:10px;
+    font-size:16px;
+    font-family:"微软雅黑";
+    line-height:35px;
+    vertical-align:middle;
+}
+.tips{
+    height: 15px;
+    font-size: 13px;
+    margin: 5px 0 18px 126px;
+    line-height: 15px;
+    overflow: hidden;
+    float:left;
+}
+.address{
+    width:100%;
+    height:35px;
+}
+.address .select{
+    height:100%;
+    margin:0 8px;
+    border:1px solid #d2d2d2;
+    color:#333;
+    font-family:'微软雅黑';
+    outline:none;
+}
+#s1{
+    width:15%;
+}
+#s2{
+    width:25%;
+}
+#s3{
+    width:27%;
+}
+.tips_wrong{
+    color: #f45e64;
+    padding-left:100px;
+    margin-top:10px;
+    margin-bottom:10px;
+    white-space: nowrap;
+    background: url('../images/login_icon.png') no-repeat 65px -93px;
+    height: 20px;
+    text-indent: 6px;
+}
+#code{
+    width:150px;
+    height:35px;
+}
+.get_code{
+    width:120px;
+    height:35px;
+    background:#19A7B5;
+    font-size:16px;
+    color:#fff;
+    font-weight:500;
+    margin-left:52px;
+    cursor:pointer;
+    font-family:"微软雅黑";
+}
+.get_code:hover{
+    background: #188694;
+}
+.submitBox{
+    text-align:center;
+}
+.submit{
+    width:280px;
+    height:40px;
+    font-size:18px;
+    color:#fff;
+    background: #19a7b5;
+    cursor:pointer;
+    font-family:"微软雅黑";
+    letter-spacing:2px;
+}
+.submit:hover{
+    background: #188694;
+}
+.login_register{
+    width:205px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:right;
+    overflow:hidden;
+}
+.login_register a{
+    color: #188694;
+}
