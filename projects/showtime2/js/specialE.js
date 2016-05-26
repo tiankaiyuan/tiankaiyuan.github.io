@@ -511,12 +511,13 @@ function specialE(selector,eveSelector,spEffect,firstImg,imgNum,funCallBack,unb)
 
                 if(!ready)return;
                 ready=false;
-                //创建子元素
 
-                var oImg=document.createElement('div');
+                //创建子元素
+                var oImg=document.createElement('img');
+                oImg.src='images/'+(next()+1)+imgType+'';
                 Utils.setStyle3(oImg, 'transform', 'scaleX(-1)');
                 Utils.setStyle(oImg, {
-                       right: 0, top: 0, width: '200%', height: '100%',position: 'absolute',background:"url(images//"+(next()+1)+imgType+") no-repeat"
+                       right: 0, top: 0, width: '200%', height: '100%',position: 'absolute'
                     });
 
                 oDiv.innerHTML='';
