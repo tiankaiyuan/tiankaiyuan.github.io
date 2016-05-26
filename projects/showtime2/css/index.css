@@ -194,8 +194,21 @@ a.link-a .fa{
     position:absolute;
     background:rgba(0,0,0,0.4);
     /*bottom:100%;*/
+    top:0;
+    left:0;
+    right:100%;
+    text-align:center;
+    line-height:130px;
+    overflow:hidden;
+    font-size:30px;
+    color:white;
     /*transition:bottom 1s linear;*/
 }
+/*.show-box-text{*/
+    /*position:absolute;*/
+    /*top:50%;*/
+    /*transform:translateY(-50%);*/
+/*}*/
 .layer-2 .container-box-l2{
     /*background:rgba(0,0,0,0.5);*/
 }

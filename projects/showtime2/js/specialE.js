@@ -511,11 +511,17 @@ function specialE(selector,eveSelector,spEffect,firstImg,imgNum,funCallBack,unb)
 
                 if(!ready)return;
                 ready=false;
+                //创建子元素
+
+                var oImg=document.createElement('div');
+                Utils.setStyle3(oImg, 'transform', 'scaleX(-1)');
+                Utils.setStyle(oImg, {
+                       right: 0, top: 0, width: '200%', height: '100%',position: 'absolute',background:"url(images//"+(next()+1)+imgType+") no-repeat"
+                    });
 
                 oDiv.innerHTML='';
                 oDiv.css("background","url(images/"+(next()+1)+imgType+") center no-repeat");// 点击发生时切换到第二张图片
                 oDiv.children().remove();
-
                 var oDivPage=document.createElement('div');
                 Utils.setStyle(oDivPage, {
                     position: 'absolute', background: 'url(images/'+(now+1)+imgType+') right no-repeat', zIndex: 3,
@@ -539,7 +545,6 @@ function specialE(selector,eveSelector,spEffect,firstImg,imgNum,funCallBack,unb)
                     position: 'absolute', right: 0, top: 0, width: '50%', height: '100%', zIndex:2,
                     background: 'rgba(0,0,0,1)'
                 });
-
                 oDiv.append(oDivShadow);
 
                 oDivPage.ch=false;
@@ -548,17 +553,17 @@ function specialE(selector,eveSelector,spEffect,firstImg,imgNum,funCallBack,unb)
                     {
                         oDivPage.ch=true;
                         //oDivPage.innerHTML='<img />';
-                        oDivPage.innerHTML='<div>';
+                        //oDivPage.innerHTML='<div>';
+                        oDivPage.appendChild(oImg);
+                            //var oImg=oDivPage.getElementsByTagName('img')[0];
+                        //var oImg=oDivPage.getElementsByTagName('div')[0];
 
-                        //var oImg=oDivPage.getElementsByTagName('img')[0];
-                        var oImg=oDivPage.getElementsByTagName('div')[0];
+                                //oImg.src='images//'+(next()+1)+imgType+'';
+                        //Utils.setStyle3(oImg, 'transform', 'scaleX(-1)');
 
-                        //oImg.src='images//'+(next()+1)+imgType+'';
-                        Utils.setStyle3(oImg, 'transform', 'scaleX(-1)');
-
-                        Utils.setStyle(oImg, {
-                            right: 0, top: 0, width: '200%', height: '100%',position: 'absolute',background:"url(images//"+(next()+1)+imgType+") no-repeat"
-                        });
+                        //Utils.setStyle(oImg, {
+                        //    right: 0, top: 0, width: '200%', height: '100%',position: 'absolute',background:"url(images//"+(next()+1)+imgType+") no-repeat"
+                        //});
                     }
 
                     if(now.y<-90)
